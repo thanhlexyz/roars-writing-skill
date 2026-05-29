@@ -14,7 +14,7 @@ Full rules live in `reference.md`; worked examples in `examples.md`.
 ## Install
 
 ```bash
-git clone git@github.com:thanhlexyz/roars-writing-skill.git ~/.skills/roars-writing
+git clone git@github.com:thanhlexyz/roars-writing-skill.git ~/.agents/skills/roars-writing
 ```
 
 Restart Cursor or start a new agent chat so the skill is indexed.
@@ -27,7 +27,7 @@ Run from your project root (creates `.cursor/skills/roars-writing/`).
 | File | Role |
 |------|------|
 | `SKILL.md` | Agent workflow and checklist |
-| `reference.md` | Complete rules from `lab-manual.typ` |
+| `reference.md` | Complete rules from `lab-manual.pdf` |
 | `examples.md` | Before/after Typst, LaTeX, bib keys, section order |
 
 ## Source
