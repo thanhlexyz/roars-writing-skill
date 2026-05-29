@@ -14,7 +14,7 @@ Full rules live in `reference.md`; worked examples in `examples.md`.
 ## Install
 
 ```bash
-git clone git@github.com:thanhlexyz/roars-writing-skill.git ~/.cursor/skills/roars-writing
+git clone git@github.com:thanhlexyz/roars-writing-skill.git ~/.skills/roars-writing
 ```
 
 Restart Cursor or start a new agent chat so the skill is indexed.
