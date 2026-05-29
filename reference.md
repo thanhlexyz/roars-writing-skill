@@ -1,79 +1,8 @@
 # ROARS Writing — Reference
 
-Source of truth: `lab-manual.typ` in [phd-cs-us](https://github.com/dynaroars/phd-cs-us). Every rule below is taken from that file.
+Source of truth: `lab-manual.pdf` in [phd-cs-us](https://github.com/dynaroars/phd-cs-us).
+Every rule below is taken from that file.
 
----
-
-## Typst preamble (`lab-manual.typ`)
-
-Required settings for ROARS lab manuals and matching guides (`advising.typ`, etc.):
-
-```typst
-#set heading(numbering: "1.")
-#set text(lang: "en", size: 11pt)
-#set list(indent: 1em)
-#set enum(indent: 1em)
-#set page(margin: 1in)
-#set par(justify: true)
-#show ref: set text(fill:blue)
-#show link: set text(fill:blue)
-#show link: underline
-#show quote: set text(style: "italic")
-#show heading: set block(above: 1.4em, below: 1em)
-#show title: set text(size: 17pt)
-#show title: set align(center)
-```
-
-Optional in other guides but present in `lab-manual.typ`:
-
-```typst
-#let dark-green = rgb("#006400")
-#let light-green = rgb("#d4f1d4")
-
-// Inline code
-#show raw.where(block: false): it => box(fill: rgb("#f0f0f0"), inset: (x: 2pt), radius: 2pt, it)
-
-// Code blocks
-#show raw.where(block: true): it => block(fill: rgb("#f0f0f0"), inset: 10pt, radius: 4pt, width: 100%, it)
-```
-
-**Do not change** these when editing content unless the user explicitly requests a layout change.
-
-### Title page (`lab-manual.typ`)
-
-- Full-page `#box(stroke: (paint: dark-green, thickness: 3pt), inset: 2em, ...)`
-- Title 32pt bold, author 18pt bold, affiliation 14pt
-- `#pagebreak()` before body
-
-### Document structure
-
-1. Title page (lab-manual style) or `#title[...]` + centered author (advising style)
-2. Green intro `#block(fill: light-green, stroke: dark-green, inset: 1em)[...]`
-3. `#outline()` then `#pagebreak()`
-4. Body sections `=`, `==`, `===`
-5. `#pagebreak()` between major parts when the source file does
-6. Appendices: `#set heading(numbering: "A.1")` then `= Appendix Title`
-
-### Typst markup conventions
-
-| Construct | Use |
-|-----------|-----|
-| `#highlight[text]` | Mandatory expectations, key terms readers must not miss |
-| `#block(fill: light-green, stroke: dark-green, inset: 1em)[...]` | Intro, warnings (e.g. Debian packages) |
-| `#rect[...]` | Notes, caveats, email templates, addresses |
-| `#link("url")[text]` | External links; ROARS links often `https://roars.dev` |
-| `#link(<label>)` | Internal cross-refs to labeled content |
-| `<label>` on heading | e.g. `== File Organization <sec:file-organization>` |
-| `@meals` / `@sec:id` | Reference labeled sections |
-| `#quote[...]` | Quoted speech; italic via `#show quote` |
-| `#figure(image(...), caption: [...])` | Figures with caption |
-| `+` / `-` lists | Steps, specs, channels; indent 1em per `#set list/enum` |
-| `_italic_` / `*bold*` | Emphasis in body (bold for channel names like `#stats`) |
-| `` `code` `` | Commands, filenames, tools — uses gray raw styling |
-
-**Heading levels:** `=` chapter, `==` section, `===` subsection. Do not skip levels.
-
-**Dashes in Typst:** `--` → en-dash; `---` → em-dash when needed.
 
 ---
 
@@ -83,7 +12,8 @@ Optional in other guides but present in `lab-manual.typ`:
 
 ### Collaboration exception
 
-Use `#rect[Note that ...]` pattern: if collaborating and **not** the lead, follow the lead's organization. If **we** lead the paper, follow the rules below.
+Use `#rect[Note that ...]` pattern: if collaborating and **not** the lead, follow the lead's organization.
+If **we** lead the paper, follow the rules below.
 
 ### Version control
 
@@ -223,14 +153,6 @@ Use when flow is weak:
 
 ## Revision checklist
 
-### Typst (`lab-manual.typ`)
-
-- [ ] Preamble block matches spec above
-- [ ] `dark-green` / `light-green` on callouts
-- [ ] Code raw styling for inline and block
-- [ ] Links blue + underlined; refs blue
-- [ ] Labels on cross-referenced sections
-- [ ] `#pagebreak()` placement preserved when restructuring
 
 ### LaTeX paper
 

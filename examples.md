@@ -1,32 +1,8 @@
 # ROARS Writing — Examples
 
-## Example 1: Typst intro block (lab-manual format)
-
-```typst
-#let dark-green = rgb("#006400")
-#let light-green = rgb("#d4f1d4")
-
-#block(fill: light-green, stroke: dark-green, inset: 1em)[
-This manual serves as a guide for prospective and current members of
-#link("https://roars.dev")[Roars Lab]. It outlines the lab's policies,
-procedures, and expectations to ensure a productive and collaborative
-research environment.
-
-*Updating the manual*: This document is a living document in Roars Lab's
-Github repo at
-
-  #align(center)[
-    #link("https://code.roars.dev/phd-cs-us/lab-manual.typ")
-  ]
-
-Lab members, who all have write access, are encouraged to provide feedback
-and suggest changes to improve its clarity and usefulness.
-]
-```
-
 ---
 
-## Example 2: Policy with `#highlight` and `#rect` caveat
+## Example 1: Policy with `#highlight` and `#rect` caveat
 
 ```typst
 Everyone has their own way of organizing files and writing papers. Below is
@@ -41,7 +17,7 @@ organize things and the rest of us will follow their lead.]
 
 ---
 
-## Example 3: Bib key convention
+## Example 2: Bib key convention
 
 | Paper | Key |
 |-------|-----|
@@ -52,7 +28,7 @@ organize things and the rest of us will follow their lead.]
 
 ---
 
-## Example 4: Paper section order mistake
+## Example 3: Paper section order mistake
 
 **Wrong writing order:** Introduction → Method → Experiments → Related Work → Conclusion
 
@@ -62,7 +38,7 @@ organize things and the rest of us will follow their lead.]
 
 ---
 
-## Example 5: Overview section content
+## Example 4: Overview section content
 
 ```typst
 == Overview <sec:overview>
@@ -79,7 +55,7 @@ the architecture in @fig:architecture is organized as shown.
 
 ---
 
-## Example 6: Related Work closing paragraph
+## Example 5: Related Work closing paragraph
 
 After each related-work subsection, add a paragraph like:
 
@@ -113,7 +89,7 @@ our submission. Below we address each comment.
 paper_gentree/
   paper.tex          % entire paper, single file
   paper.bib          % copied from scholar export, not ~/myrefs.bib symlink
-  figures/
+  figure/
     overview.pdf
     results.pdf
 ```
